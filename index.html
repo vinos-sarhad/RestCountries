@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        
+body{
+    font-family: "Nunito Sans", sans-serif;
+}
+ 
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-800">
+    <div class="shadow-md bg-white dark:bg-gray-700"> 
+        <nav class=" flex justify-between items-center py-4 container  mx-auto px-4 "> 
+            <h1 class=" font-bold dark:text-white">Where in the World?</h1>
+            <div class="flex items-center dark:text-white" id="darkModeToggle">
+                <img src="images/moon.svg" alt="Dark Mode Icon" class="w-4 h-4 mr-1">
+                <h2 class="text-sm">Dark Mode</h2>
+            </div>
+        
+        </nav>
+    </div>
+   
+
+
+    
+        <div class="container flex md:items-center items-start flex-col md:flex-row mx-auto px-4 justify-between  py-2 ">
+            <div class="relative">
+                <!-- <img src="images/search.svg" alt="Search Icon" class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"> -->
+                
+           
+                <input type="text" id="search-input" placeholder="Search for a country..." class="pl-10 border dark:border-gray-700 shadow-sm rounded-lg px-4 py-2 dark:bg-gray-700">
+            </div>
+
+ 
+
+            <div class="relative   my-5 ">
+                <select id="region-select" class="block appearance-none border w-full bg-white dark:border-gray-700 dark:bg-gray-700 shadow-sm dark:text-white rounded-lg px-4 py-2 pr-8 leading-tight focus:outline-none focus:border-gray-500">
+                    <option value="">Filter by Region</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                  </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 7l3-3 3 3m0 6l-3 3-3-3" /></svg>
+                </div>
+            </div>  
+
+
+        </div>
+
+
+        <div class="container mx-auto px-4 flex flex-wrap justify-center sm:justify-between  gap-6 " id="country-cards">
+
+           
+            
+        </div>
+    <script>
+       const darkModeToggle = document.getElementById('darkModeToggle');
+const htmlElement = document.documentElement;
+let isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+    isDarkMode = !isDarkMode; // Toggle dark mode status
+    htmlElement.classList.toggle('dark', isDarkMode); // Toggle 'dark' class on <html> element
+    localStorage.setItem('darkMode', isDarkMode); // Store dark mode preference in local storage
+}
+
+// Add event listener to the dark mode toggle button
+darkModeToggle.addEventListener('click', toggleDarkMode);
+
+// Apply dark mode when the page loads
+toggleDarkMode();
+    </script>
+
+
+<script src="index.js"></script>
+</body>
+</html>

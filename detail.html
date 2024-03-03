@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        
+body{
+    font-family: "Nunito Sans", sans-serif;
+}
+ 
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-800">
+    <div class="shadow-md bg-white dark:bg-gray-700"> 
+        <nav class=" flex justify-between items-center py-4 container  mx-auto px-4 "> 
+            <h1 class=" font-bold dark:text-white">Where in the World?</h1>
+            <div class="flex items-center dark:text-white" id="darkModeToggle">
+                <img src="images/moon.svg" alt="Dark Mode Icon" class="w-4 h-4 mr-1">
+                <h2 class="text-sm">Dark Mode</h2>
+            </div>
+        
+        </nav>
+    </div>
+   <div class="container mx-auto px-4">
+    <div class="flex items-center my-20 shadow-md dark:border-gray-700 border-2 border-gray-100 rounded-md p-2 max-w-40 ">
+        <a href="index.html" class="flex items-center text-gray-700  hover:text-gray-900">
+            <img src="images/back.svg" alt="Back" class="w-5 h-5">
+            <span class="ml-2 dark:text-white">Back Button</span>
+        </a>
+    </div>
+   </div>
+   
+    
+
+   <div id="country-details" class="flex justify-between container mx-auto px-4 mb-20">
+    <div class="  w-full sm:w-1/2">
+      <img id="country-flag" class="w-full px-5 md.px-20" alt="">
+    </div>
+
+    <div class="w-full sm:w-1/2  pb-10">
+        <div class=" flex justify-between p-10 dark:text-white">
+            <div>
+              <h1 id="country-name" class="text-xl font-bold"></h1>
+              <p id="native-name" class="text-sm  my-10 "><strong>Native Name: </strong></p>
+              <p id="population" class="text-sm  my-10"><strong>Population: </strong></p>
+              <p id="region" class="text-sm my-10"><strong>Region: </strong></p>
+              <p id="sub-region" class="text-sm my-10"><strong>Sub Region: </strong></p>
+              <p id="capital" class="text-sm my-10"><strong>Capital: </strong></p>
+            </div>
+            <div>
+              <p id="top-level-domain" class="text-sm my-10"><strong>Top Level Domain: </strong></p>
+              <p id="currencies" class="text-sm my-10"><strong>Currencies: </strong></p>
+              <p id="languages" class="text-sm my-10"><strong>Languages: </strong></p>
+            </div>
+          </div>
+        <div class=" flex justify-between px-10 dark:text-white">
+            <div class="flex ">  <p ><strong>Border countries  :  </strong></p>  <p id="border-countries">1</p> </div>
+   
+    </div>
+   
+  </div>
+ 
+
+
+ 
+
+<script src="country-details.js"></script>
+ 
+    
+
+</body>
+</html>
